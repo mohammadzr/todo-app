@@ -24,7 +24,7 @@ function EditTaskPopUp({ editTaskPopupCloseFunc }) {
   };
 
   return (
-    <div className="max-w-screen-sm md:w-screen p-4 bg-white rounded-2xl shadow-lg">
+    <div className="max-w-screen-sm md:w-screen p-5 bg-white rounded-2xl shadow-lg">
       <div className="w-full pb-[24px]">
         <h1 className="mb-3 font-medium text-2xl">Edit Todo</h1>
         <span className="font-medium">
