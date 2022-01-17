@@ -1,0 +1,26 @@
+{
+  "name": "todo-roocket",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.7.1",
+    "next": "12.0.8",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.3.1",
+    "react-outside-click-handler": "^1.3.0",
+    "react-redux": "^7.2.6"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "eslint": "8.6.0",
+    "eslint-config-next": "12.0.8",
+    "postcss": "^8.2.15",
+    "tailwindcss": "^3.0.15"
+  }
+}
