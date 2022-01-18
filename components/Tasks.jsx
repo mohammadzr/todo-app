@@ -1,6 +1,6 @@
 import { FiTrash2 } from "react-icons/fi";
 import { FaPencilAlt } from "react-icons/fa";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { completeStatus, deleteTask } from "../redux/state Slices/tasksSlice";
 import {
   getEditTaskId,
@@ -8,7 +8,6 @@ import {
 } from "../redux/state Slices/popupSlice";
 
 function Tasks({ item }) {
-  const tasks = useSelector((state) => state.taskReducer);
 
   const dispatch = useDispatch();
 
@@ -18,7 +17,7 @@ function Tasks({ item }) {
 
   return (
     <div
-      className={`container-content-main-item flex flex-row justify-between items-center w-full pl-6 pr-16 pb-3 pt-[22px] border-b border-slate-200	`}
+      className={`container-content-main-item flex flex-row flex-wrap justify-between items-center w-full pl-3 pr-8 md:pl-6 md:pr-16 pb-3 pt-[22px] border-b border-slate-200	`}
     >
       <div
         className={`container-content-main-item-left flex flex-row flex-shrink flex-1 items-center mr-8`}
@@ -42,11 +41,11 @@ function Tasks({ item }) {
         </div>
       </div>
       <div
-        className={`container-content-main-right flex flex-row items-center`}
+        className={`container-content-main-right flex flex-row items-center ml-auto`}
       >
         {!item.completeStatus ? (
           <FaPencilAlt
-          className="mr-6 fill-blue-500 cursor-pointer"
+          className=" m-4 md:mr-6 fill-blue-500 cursor-pointer"
           onClick={() => {
             dispatch(updateEditTaskStatus());
             dispatch(getEditTaskId(item.id));

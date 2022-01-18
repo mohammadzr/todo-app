@@ -2,9 +2,9 @@ import { useState } from "react";
 
 function useInputControl(initialValue) {
   const [inputVal, setInputVal] = useState(initialValue);
-  
+
   const reset = () => {
-    setInputVal("");
+    initialValue == "" ? setInputVal("") : setInputVal(inputVal);
   };
 
   const bind = {
